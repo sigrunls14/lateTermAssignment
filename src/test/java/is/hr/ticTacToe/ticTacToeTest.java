@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class ticTacToeTest
 {
+	
 	public static void main(String args[])
 	{
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
@@ -28,7 +29,7 @@ public class ticTacToeTest
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(3, testNumbers));
+			assertEquals(0, ticTacToe.game(3));
 		}
 		catch(Exception e)
 		{
@@ -36,196 +37,109 @@ public class ticTacToeTest
 		}
 	}
 
+	@Test
+	public void testWantsToQuit()
+	{
+		assertEquals(false, ticTacToe.game("q"));
+	}
 
 	@Test
-	public void testXWon123()
+	public void testIsTie()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(false, ticTacToe.isTie());
 		}
 		catch
 		{
-			assertEquals("Player x has won the game");
-		}
-	}
-	
-	@Test
-	public void testXWon456()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player x has won the game");
+			assertEquals("Tie", e.getMessage());
 		}
 	}
 
 	@Test
-	public void testXWon789()
+	public void testCorrectPosition()
+	{
+		assertEquals("")
+	}
+
+	@Test
+	public void testXWonRows()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(0, ticTacToe.checkRows());
 		}
-		catch
+		catch (Exception e) 
 		{
-			assertEquals("Player x has won the game");
+			assertEquals("Player X won!", e.getMessage());
 		}
 	}
 
 	@Test
-	public void testXWon147()
+	public void testXWonColumns()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(0, ticTacToe.checkColumns());
 		}
-		catch
+		catch (Exception e) 
 		{
-			assertEquals("Player x has won the game");
+			assertEquals("Player X won!", e.getMessage());
 		}
 	}
 
 	@Test
-	public void testXWon258()
+	public void testXWonDiagonally()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(0, ticTacToe.checkDiagonally());
 		}
-		catch
+		catch (Exception e) 
 		{
-			assertEquals("Player x has won the game");
-		}
-	}
-        @Test
-	public void testOWon123()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}
-	public void testOWon456()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}public void testOWon789()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}public void testOWon147()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}public void testOWon258()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}
-	public void testOWon369()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}
-	public void testOWon159()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
-		}
-	}
-	public void testOWon357()
-	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(testNumbers));
-		}
-		catch
-		{
-			assertEquals("Player O has won the game");
+			assertEquals("Player X won!", e.getMessage());
 		}
 	}
 
 	@Test
-	public void testXWon369()
+	public void testOWonRows()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(0, ticTacToe.checkRows());
 		}
-		catch
+		catch (Exception e) 
 		{
-			assertEquals("Player x has won the game");
+			assertEquals("Player O won!", e.getMessage());
 		}
 	}
-	
 
 	@Test
-	public void testXWon159()
+	public void testOWonColumns()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(0, ticTacToe.checkColumns());
 		}
-		catch
+		catch (Exception e) 
 		{
-			assertEquals("Player x has won the game");
+			assertEquals("Player O won!", e.getMessage());
 		}
 	}
-	
 
 	@Test
-	public void testXWon357()
+	public void testOWonDiagonally()
 	{
 		try
 		{
-			assertEquals(0, ticTacToe.game(testNumbers));
+			assertEquals(0, ticTacToe.checkDiagonally());
 		}
-		catch
+		catch (Exception e) 
 		{
-			assertEquals("Player x has won the game");
+			assertEquals("Player O won!", e.getMessage());
 		}
 	}
+}
+
+
 
