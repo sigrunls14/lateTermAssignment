@@ -63,3 +63,42 @@ public class ticTacToeTest
 		}
 	}
 
+	@Test
+	public void testXWon789()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers))
+		}
+		catch
+		{
+			assertEquals("Player x has won the game")
+		}
+	}
+
+	@Test
+	public void testXWon147()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers))
+		}
+		catch
+		{
+			assertEquals("Player x has won the game")
+		}
+	}
+
+	@Test
+	public void testXWon258()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers))
+		}
+		catch
+		{
+			assertEquals("Player x has won the game")
+		}
+	}
+
