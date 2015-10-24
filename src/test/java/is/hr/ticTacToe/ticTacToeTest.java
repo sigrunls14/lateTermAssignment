@@ -35,4 +35,31 @@ public class ticTacToeTest
 			assertEquals("Tile is occupied please pick a different tile", e.getMessage());
 		}
 	}
-}
+
+
+	@Test
+	public void testXWon123()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers))
+		}
+		catch
+		{
+			assertEquals("Player x has won the game")
+		}
+	}
+	
+	@Test
+	public void testXWon456()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers))
+		}
+		catch
+		{
+			assertEquals("Player x has won the game")
+		}
+	}
+
