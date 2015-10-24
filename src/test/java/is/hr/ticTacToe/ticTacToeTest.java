@@ -84,7 +84,7 @@ public class ticTacToeTest
 			assertEquals(0, ticTacToe.game(testNumbers));
 		}
 		catch
-
+		{
 			assertEquals("Player x has won the game");
 		}
 	}
@@ -185,6 +185,47 @@ public class ticTacToeTest
 		catch
 		{
 			assertEquals("Player O has won the game");
+		}
+	}
+
+	@Test
+	public void testXWon369()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player x has won the game");
+		}
+	}
+	
+
+	@Test
+	public void testXWon159()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player x has won the game");
+		}
+	}
+	
+
+	@Test
+	public void testXWon357()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player x has won the game");
 		}
 	}
 
