@@ -101,4 +101,90 @@ public class ticTacToeTest
 			assertEquals("Player x has won the game");
 		}
 	}
+        @Test
+	public void testOWon123()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}
+	public void testOWon456()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}public void testOWon789()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}public void testOWon147()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}public void testOWon258()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}
+	public void testOWon369()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}
+	public void testOWon159()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}
+	public void testOWon357()
+	{
+		try
+		{
+			assertEquals(0, ticTacToe.game(testNumbers));
+		}
+		catch
+		{
+			assertEquals("Player O has won the game");
+		}
+	}
 
