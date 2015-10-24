@@ -84,7 +84,7 @@ public class ticTacToeTest
 			assertEquals(0, ticTacToe.game(testNumbers));
 		}
 		catch
-
+		{
 			assertEquals("Player x has won the game");
 		}
 	}
