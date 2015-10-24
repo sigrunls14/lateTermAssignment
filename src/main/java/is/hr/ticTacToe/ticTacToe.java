@@ -1,4 +1,5 @@
 package is.hr.ticTacToe;
+import java.util.Scanner;
 
 public class ticTacToe
 {
@@ -26,3 +27,49 @@ public void setUpBoard()
 	}
 }
 
+public void input()
+{
+	char move;
+	Scanner input = new Scanner(System.input)
+	move = input.nextLine();
+	if(legalInput(move) == true)
+	{
+		switch(Integer.parseInt(move))
+		{
+			case 1: board[0][0] = currentPlayer;
+					break;
+			case 2: board[0][1] = currentPlayer;
+					break;
+			case 3: board[0][2] = currentPlayer;
+					break;
+			case 4: board[1][0] = currentPlayer;
+					break;
+			case 5: board[1][1] = currentPlayer;
+					break;
+			case 6: board[1][2] = currentPlayer;
+					break;
+			case 7: board[2][0] = currentPlayer;
+					break;
+			case 8: board[2][1] = currentPlayer;
+					break;
+			case 9: board[2][2] = currentPlayer;
+					break;
+		}
+	}
+	else
+	{
+		throw new RuntimeException("Illegal input");
+	}
+}
+
+public boolean legalInput(char move)
+{
+	if((Integer.parseInt(move) > 0) && (Integer.parseInt(move) < 10))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
