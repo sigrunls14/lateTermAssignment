@@ -74,6 +74,7 @@ public class ticTacToe
 		}
 	}*/
 
+	//Checks the rows on the board and returns either - if no winner, X if X won a row and O if O won a row
 	public static char checkRows(char [][] board)
 	{
 		char checkWinner = '-';
@@ -90,6 +91,7 @@ public class ticTacToe
 		return checkWinner;
 	}
 
+	// Same as checkRows function, returns either -, X or O
 	public static char checkColumns(char [][] board)
 	{
 		char checkWinner = '-';
@@ -106,6 +108,7 @@ public class ticTacToe
 		return checkWinner;
 	}
 
+	// Same as checkColumns and checkRows function, returns either -, X or O
 	public static char checkDiagonally(char [][] board)
 	{
 		char checkWinner = '-';
