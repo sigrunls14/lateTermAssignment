@@ -107,14 +107,13 @@ public class ticTacToeTest
 	@Test
 	public void testXWonDiagonally()
 	{
-		try
-		{
-			assertEquals(0, ticTacToe.checkDiagonally());
-		}
-		catch (Exception e) 
-		{
-			assertEquals("Player X won!", e.getMessage());
-		}
+		setUpBoard();
+		board[0][0] = 'X';
+		board[1][1] = 'X'; 
+		board[2][2] = 'X';
+
+		assertEquals('X', ticTacToe.checkDiagonally(board));
+
 	}
 
 	@Test
