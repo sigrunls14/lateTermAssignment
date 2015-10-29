@@ -5,29 +5,12 @@ import org.junit.Test;
 
 public class ticTacToeTest
 {
-	
-	private char[][] board;
-	board[][] = new char [3][3];
-
 	public static void main(String args[])
 	{
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
 	}
 
-	public void setUpBoard()
-	{
-		// looping through X-axis
-		for(int i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(int j = 0; j < 3; j++)
-			{
-				board[i][j] = '-';
-			}
-		}	
-	}
-
-	@Test
+	/*@Test
 	public void testLegalInput()
 	{
 		try
@@ -76,17 +59,29 @@ public class ticTacToeTest
 	public void testCorrectPosition()
 	{
 		assertEquals("")
-	}
+	}*/
 
 	@Test
 	public void testXWonRows()
 	{
 
-		setUpBoard();
+		char[][] board = new char[3][3];
+
+		// looping through X-axis
+		for(int i = 0; i < 3; i++)
+		{
+			// Looping through Y-axis
+			for(int j = 0; j < 3; j++)
+			{
+				board[i][j] = '-';
+			}
+		}	
 
 		board[0][0] = 'X';
 		board[0][1] = 'X'; 
 		board[0][2] = 'X';
+
+		//setWinnerOnRow('X');
 
 		assertEquals('X', ticTacToe.checkRows(board));
 	}
@@ -94,8 +89,17 @@ public class ticTacToeTest
 	@Test
 	public void testXWonColumns()
 	{
+		char[][] board = new char[3][3];
 		
-		setUpBoard();
+		// looping through X-axis
+		for(int i = 0; i < 3; i++)
+		{
+			// Looping through Y-axis
+			for(int j = 0; j < 3; j++)
+			{
+				board[i][j] = '-';
+			}
+		}	
 
 		board[0][0] = 'X';
 		board[1][0] = 'X'; 
@@ -107,7 +111,18 @@ public class ticTacToeTest
 	@Test
 	public void testXWonDiagonally()
 	{
-		setUpBoard();
+		char[][] board = new char[3][3];
+		
+		// looping through X-axis
+		for(Integer i = 0; i < 3; i++)
+		{
+			// Looping through Y-axis
+			for(Integer j = 0; j < 3; j++)
+			{
+				board[i][j] = '-' ;
+			}
+		}	
+
 		board[0][0] = 'X';
 		board[1][1] = 'X'; 
 		board[2][2] = 'X';
@@ -116,6 +131,7 @@ public class ticTacToeTest
 
 	}
 
+	/*
 	@Test
 	public void testOWonRows()
 	{
@@ -153,7 +169,7 @@ public class ticTacToeTest
 		{
 			assertEquals("Player O won!", e.getMessage());
 		}
-	}
+	}*/
 }
 
 
