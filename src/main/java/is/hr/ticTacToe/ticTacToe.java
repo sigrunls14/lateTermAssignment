@@ -73,3 +73,19 @@ public boolean legalInput(char move)
 		return false;
 	}
 }
+
+private char checkRows(char [][] board)
+{
+	char checkWinner = '-';
+
+	for(int i = 0; i < 3; i++)
+	{
+		//Checks if the first column in the row is either X or O, then compares the row to check if either of them won
+		if((board[i][0] != '-') && (board[i][0] == board[i][1]) && (board[i][1] == board[i][2]))
+		{
+			checkWinner = board[i][0];
+		}
+	}	
+
+	return checkWinner;
+}
