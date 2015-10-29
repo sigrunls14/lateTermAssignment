@@ -6,6 +6,8 @@ import org.junit.Test;
 public class ticTacToeTest
 {
 	
+	private char[][] board;
+
 	public static void main(String args[])
 	{
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
@@ -65,14 +67,18 @@ public class ticTacToeTest
 	@Test
 	public void testXWonRows()
 	{
-		try
+		board[][] = new char [3][3];
+		board[0][0] = 'X';
+		board[0][1] = 'X'; 
+		board[0][2] = 'X';
+		for(int i = 1; i < 3; i++)
 		{
-			assertEquals(0, ticTacToe.checkRows());
-		}
-		catch (Exception e) 
-		{
-			assertEquals("Player X won!", e.getMessage());
-		}
+			for(int j = 0; j < 3; j++)
+			{
+				board[i][j] = '-'
+			}
+		} 
+		assertEquals('X', ticTacToe.checkRows(board))
 	}
 
 	@Test
