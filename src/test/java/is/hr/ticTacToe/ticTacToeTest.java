@@ -82,8 +82,6 @@ public class ticTacToeTest
 		board[0][1] = 'X'; 
 		board[0][2] = 'X';
 
-		//setWinnerOnRow('X');
-
 		assertEquals('X', ticTacToe.checkRows(board));
 	}
 
@@ -132,45 +130,71 @@ public class ticTacToeTest
 
 	}
 
-	/*
 	@Test
 	public void testOWonRows()
 	{
-		try
+		char[][] board = new char[3][3];
+
+		// looping through X-axis
+		for(int i = 0; i < 3; i++)
 		{
-			assertEquals(0, ticTacToe.checkRows());
-		}
-		catch (Exception e) 
-		{
-			assertEquals("Player O won!", e.getMessage());
-		}
+			// Looping through Y-axis
+			for(int j = 0; j < 3; j++)
+			{
+				board[i][j] = '-';
+			}
+		}	
+
+		board[2][0] = 'O';
+		board[2][1] = 'O'; 
+		board[2][2] = 'O';
+
+		assertEquals('O', ticTacToe.checkRows(board));
 	}
 
 	@Test
 	public void testOWonColumns()
 	{
-		try
+		char[][] board = new char[3][3];
+		
+		// looping through X-axis
+		for(int i = 0; i < 3; i++)
 		{
-			assertEquals(0, ticTacToe.checkColumns());
-		}
-		catch (Exception e) 
-		{
-			assertEquals("Player O won!", e.getMessage());
-		}
+			// Looping through Y-axis
+			for(int j = 0; j < 3; j++)
+			{
+				board[i][j] = '-';
+			}
+		}	
+
+		board[0][1] = 'O';
+		board[1][1] = 'O'; 
+		board[2][1] = 'O';
+
+		assertEquals('O', ticTacToe.checkColumns(board));
 	}
 
 	@Test
 	public void testOWonDiagonally()
 	{
-		try
+		char[][] board = new char[3][3];
+		
+		// looping through X-axis
+		for(Integer i = 0; i < 3; i++)
 		{
-			assertEquals(0, ticTacToe.checkDiagonally());
-		}
-		catch (Exception e) 
-		{
-			assertEquals("Player O won!", e.getMessage());
-		}
-	}*/
+			// Looping through Y-axis
+			for(Integer j = 0; j < 3; j++)
+			{
+				board[i][j] = '-' ;
+			}
+		}	
+
+		board[0][2] = 'O';
+		board[1][1] = 'O'; 
+		board[2][0] = 'O';
+
+		assertEquals('O', ticTacToe.checkDiagonally(board));
+	}
 }
 
 
