@@ -92,5 +92,16 @@ private char checkRows(char [][] board)
 
 private char checkColumns(char [][] board)
 {
-	
+	char checkWinner = '-';
+
+	for(int i = 0; i < 3; i++)
+	{
+		//Checks if the first column in the row is either X or O, then compares the row to check if either of them won
+		if((board[0][i] != '-') && (board[0][i] == board[1][i]) && (board[1][i] == board[2][i]))
+		{
+			checkWinner = board[0][i];
+		}
+	}	
+
+	return checkWinner;
 }
