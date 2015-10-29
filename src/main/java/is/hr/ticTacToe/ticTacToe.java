@@ -89,3 +89,8 @@ private char checkRows(char [][] board)
 
 	return checkWinner;
 }
+
+private char checkColumns(char [][] board)
+{
+	
+}
