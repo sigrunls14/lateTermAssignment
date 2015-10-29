@@ -9,7 +9,7 @@ public class ticTacToe
 	public ticTacToe()
 	{
 		board = new char [3][3];
-		currentPlayer = 'x';
+		currentPlayer = 'X';
 		setUpBoard();
 	}	
 
@@ -75,7 +75,7 @@ public class ticTacToe
 	}*/
 
 	//Checks the rows on the board and returns either - if no winner, X if X won a row and O if O won a row
-	public static char checkRows(char [][] board)
+	static public char checkRows(char [][] board)
 	{
 		char checkWinner = '-';
 
@@ -92,7 +92,7 @@ public class ticTacToe
 	}
 
 	// Same as checkRows function, returns either -, X or O
-	public static char checkColumns(char [][] board)
+	static public char checkColumns(char [][] board)
 	{
 		char checkWinner = '-';
 
@@ -109,7 +109,7 @@ public class ticTacToe
 	}
 
 	// Same as checkColumns and checkRows function, returns either -, X or O
-	public static char checkDiagonally(char [][] board)
+	static public char checkDiagonally(char [][] board)
 	{
 		char checkWinner = '-';
 
