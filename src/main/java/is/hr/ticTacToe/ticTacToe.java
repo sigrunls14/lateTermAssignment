@@ -59,45 +59,9 @@ public class ticTacToe
 		}
 	}
 
-	private boolean checkRows()
-	{
-		if( Board.checkRows() != '-')
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
-	private boolean checkColumns()
-	{
-		if( Board.checkColumns() != '-')
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
-	private boolean checkDiagnoally()
-	{
-		if( Board.checkDiagnoally() != '-')
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
 	public boolean checkWinner()
 	{
-		if( (checkRows() == true ) || (checkDiagnoally() == true) || (checkColumns() == true) )
+		if( (Board.checkRows() != '-' ) || (Board.checkDiagnoally() != '-') || (Board.checkColumns() != '-') )
 		{
 			return true;
 		}

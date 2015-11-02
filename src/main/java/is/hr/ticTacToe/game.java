@@ -10,13 +10,17 @@ public class game
 		String ask4Number = "Enter a Number between 1 and 10 corresponding to a place on the board!";
 		boolean gameOver = false;
 		Integer turns = 0;
-		char continueGame;
+		char cont;
 
 		//Do while loop
 		if(turns == 9)
 		{
 			System.out.print("Tie, Do you want to start new game y/n?:");
-
+			cont = continueGame();
+			if((cont == 'n') || (cont == 'N'))
+			{
+				gameOver = true;
+			}
 		}
 		else
 		{
@@ -27,6 +31,14 @@ public class game
 			turns++;
 		}
 		
+	}
+
+	public static char continueGame()
+	{
+		Scanner input = new Scanner(System.in);
+		char reply = input.next().charAt(0);
+
+		return reply;
 	}
 
 	//Asks for move
