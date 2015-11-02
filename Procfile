@@ -1,1 +1,1 @@
-web: build/reports/tests/index.html
+web: build/install/lateTermAssignment/bin/lateTermAssignment
