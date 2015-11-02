@@ -1,0 +1,6 @@
+#!/bin/bash
+
+./gradlew build
+./gradlew test
+./gradlew clean
+
