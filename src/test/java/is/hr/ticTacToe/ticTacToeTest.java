@@ -43,14 +43,6 @@ public class ticTacToeTest
 		
 	}*/
 
-	/*
-	@Test
-	public void testCorrectPosition()
-	{
-		assertEquals("")
-	}*/
-
-
 	@Test
 	public void testChangePlayer()
 	{
