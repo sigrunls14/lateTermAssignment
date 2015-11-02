@@ -4,5 +4,5 @@ jdk:
   - oraclejdk8
 
 script:
-  ~/lateTermAssignment/bin/runmaster
+  ./bin/runmaster
   
