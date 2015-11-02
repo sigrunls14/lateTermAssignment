@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class ticTacToeTest
 {
+	board Board = new board();
 	public static void main(String args[])
 	{
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
@@ -37,12 +38,14 @@ public class ticTacToeTest
 		assertEquals(false, ticTacToe.checkWinner());
 		
 	}
-	/*
+	
 	@Test
 	public void testCorrectPosition()
 	{
-		assertEquals("")
-	}*/
+		Board = getBoard();
+		Board.addMove(5, 'X');
+		assertEquals('X', Board.correctPosition());
+	}
 
 
 	@Test
