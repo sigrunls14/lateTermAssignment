@@ -27,6 +27,11 @@ public class ticTacToe
 		
 	}
 
+	static public void resetBoard()
+	{
+		Board.resetBoard();
+	}
+
 	static public char changePlayer(char playerMark)
 	{
 		if(playerMark == 'X')

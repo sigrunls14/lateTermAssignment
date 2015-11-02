@@ -23,6 +23,11 @@ public class board
 		}
 	}
 
+	public void resetBoard()
+	{
+		setUpBoard();
+	}
+
 	public char[][] getBoard()
 	{
 		return board;

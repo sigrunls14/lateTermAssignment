@@ -1,10 +1,9 @@
 package is.hr.ticTacToe;
 import java.util.Scanner;
 
-
 public class game
 {
-	public static void main()
+	public static void main(String[] args)
 	{
 		ticTacToe tic = new ticTacToe();
 		String ask4Number = "Enter a Number between 1 and 10 corresponding to a place on the board!";
@@ -12,25 +11,31 @@ public class game
 		Integer turns = 0;
 		char cont;
 
-		//Do while loop
-		if(turns == 9)
+		while(!gameOver)
 		{
-			System.out.print("Tie, Do you want to start new game y/n?:");
-			cont = continueGame();
-			if((cont == 'n') || (cont == 'N'))
+			if(turns == 9)
 			{
-				gameOver = true;
+				System.out.print("Tie, Do you want to start new game y/n?:");
+				cont = continueGame();
+				if((cont == 'n') || (cont == 'N'))
+				{
+					gameOver = true;
+				}
+				else
+				{
+					turns = 0;
+					tic.resetBoard();
+				}
 			}
-		}
-		else
-		{
-			System.out.println(ask4Number);	
-			int move = move();
-			tic.input(move);
-			gameOver = tic.checkWinner();
-			turns++;
-		}
-		
+			else
+			{
+				System.out.println(ask4Number);	
+				int move = move();
+				tic.input(move);
+				gameOver = tic.checkWinner();
+				turns++;
+			}
+		}		
 	}
 
 	public static char continueGame()
