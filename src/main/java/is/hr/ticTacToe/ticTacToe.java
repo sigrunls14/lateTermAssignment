@@ -29,7 +29,7 @@ public class ticTacToe
 		}
 		else
 		{
-			throw new RuntimeException("this place is occupied!!");
+			throw new RuntimeException("Occupied!!");
 		}
 		
 	}
