@@ -16,39 +16,28 @@ public class ticTacToeTest
 		assertEquals(false, ticTacToe.legalInput(11));
 	}
 
-	/*
+	
 	@Test
 	public void testIsOccupied()
 	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(3));
-		}
-		catch(Exception e)
-		{
-			assertEquals("Tile is occupied please pick a different tile", e.getMessage());
-		}
+			
+			assertEquals(true, board.isOccupied());
 	}
-
+	/*
 	@Test
 	public void testWantsToQuit()
 	{
 		assertEquals(false, ticTacToe.game("q"));
-	}
+	}*/
 
 	@Test
 	public void testIsTie()
 	{
-		try
-		{
-			assertEquals(false, ticTacToe.isTie());
-		}
-		catch
-		{
-			assertEquals("Tie", e.getMessage());
-		}
+		char[][] board = new char[][]{{'O', 'X', 'O'}, {'O', 'X', 'X'}, {'X', 'O', 'O'}};
+		assertEquals(false, ticTacToe.checkWinner());
+		
 	}
-
+	/*
 	@Test
 	public void testCorrectPosition()
 	{
