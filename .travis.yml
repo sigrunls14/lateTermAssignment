@@ -4,5 +4,8 @@ jdk:
   - oraclejdk8
 
 script:
-  ./bin/runmaster
+  ./gradlew build
+  ./gradlew test
+  ./gradlew clean
+
   
