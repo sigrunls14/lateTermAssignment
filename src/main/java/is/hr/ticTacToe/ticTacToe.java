@@ -27,14 +27,20 @@ public class ticTacToe
 		}
 	}
 
-	/*public void input()
+	public void input()
 	{
-		char move;
-		Scanner input = new Scanner(System.input)
-		move = input.nextLine();
+
+		// diff class
+		Integer move;
+		Scanner input = new Scanner(System.in);
+		move = input.nextInt();
+		//
+
+
 		if(legalInput(move) == true)
-		{
-			switch(Integer.parseInt(move))
+		{	
+			//split function
+			switch(move)
 			{
 				case 1: board[0][0] = currentPlayer;
 						break;
@@ -62,9 +68,10 @@ public class ticTacToe
 		}
 	}
 
-	public boolean legalInput(char move)
+	//Checks 
+	static public boolean legalInput(Integer move)
 	{
-		if((Integer.parseInt(move) > 0) && (Integer.parseInt(move) < 10))
+		if((move > 0) && (move < 10))
 		{
 			return true;
 		}
@@ -72,7 +79,7 @@ public class ticTacToe
 		{
 			return false;
 		}
-	}*/
+	}
 
 	//Checks the rows on the board and returns either - if no winner, X if X won a row and O if O won a row
 	static public char checkRows(char [][] board)
