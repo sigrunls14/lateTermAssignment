@@ -13,7 +13,7 @@ public class ticTacToeTest
 	@Test
 	public void testLegalInput()
 	{
-		assertEquals(false, ticTacToe.legalInput(10));
+		assertEquals(false, ticTacToe.legalInput(11));
 	}
 
 	/*
@@ -59,7 +59,7 @@ public class ticTacToeTest
 	@Test
 	public void testChangePlayer()
 	{
-		assertEquals("O", ticTacToe.changePlayer());
+		assertEquals('O', ticTacToe.changePlayer('X'));
 	}
 
 	@Test
