@@ -32,7 +32,7 @@ public class game
 			else
 			{
 				System.out.println(ask4Number);
-				printBoard();	
+				tic.printBoard();	
 				move = input.next();
 				tic.input(Integer.parseInt(move));
 				gameOver = tic.checkWinner();
