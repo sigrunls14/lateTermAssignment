@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-APP="chuck_joke"
+APP="TicTacToe"
 
 # Always deploy new version, clean before
 bin/clean

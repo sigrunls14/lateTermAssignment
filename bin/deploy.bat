@@ -1,5 +1,5 @@
 @echo off
-set APP=chuck_joke
+set APP=TicTacToe
 set LOCATION=C:\temp
 
 REM Always deploy new version, clean before
