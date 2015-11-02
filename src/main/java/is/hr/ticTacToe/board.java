@@ -55,99 +55,66 @@ public class board
 
 	public boolean isOccupied(Integer move)
 	{
+		boolean occupied = false;
+
 		switch(move)
 		{
 			case 1: 
 				if(board[0][0] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 2: 
 				if(board[0][1] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 3: 
 				if(board[0][2] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 4: 
 				if(board[1][0] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 5: 
 				if(board[1][1] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 6: 
 				if(board[1][2] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 7: 
 				if(board[2][0] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 8: 
 				if(board[2][1] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 			case 9: 
 				if(board[2][2] != '-')
 				{
-					return true;
-				}
-				else
-				{
-					return false;
+					occupied = true;
 				}
 				break;
 		}
+		return occupied;
 	}
 
 	//Checks the rows on the board and returns either - if no winner, X if X won a row and O if O won a row
