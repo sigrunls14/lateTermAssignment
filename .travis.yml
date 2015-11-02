@@ -4,8 +4,8 @@ jdk:
   - oraclejdk8
 
 script:
-  ./gradle build
-  ./gradle test
-  ./gradle clean
+  - ./gradle build
+  - ./gradle test
+  - ./gradle clean
 
   
