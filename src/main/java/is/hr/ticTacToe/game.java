@@ -31,7 +31,8 @@ public class game
 			}
 			else
 			{
-				System.out.println(ask4Number);	
+				System.out.println(ask4Number);
+				printBoard();	
 				move = input.next();
 				tic.input(Integer.parseInt(move));
 				gameOver = tic.checkWinner();
