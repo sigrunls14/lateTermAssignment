@@ -53,7 +53,7 @@ public class board
 		}
 	}
 
-	public boolean isOccupied(Integer move)
+	public static boolean isOccupied(Integer move)
 	{
 		boolean occupied = false;
 

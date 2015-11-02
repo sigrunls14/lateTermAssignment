@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ticTacToeTest
 {
-	board Board = new board();
+
 	public static void main(String args[])
 	{
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
@@ -21,9 +21,12 @@ public class ticTacToeTest
 	@Test
 	public void testIsOccupied()
 	{
-			
-			assertEquals(true, board.isOccupied());
+		board Board = new board();
+		Board.addMove(5, 'X');
+
+		assertEquals(true, board.isOccupied(5));
 	}
+
 	/*
 	@Test
 	public void testWantsToQuit()
@@ -31,14 +34,15 @@ public class ticTacToeTest
 		assertEquals(false, ticTacToe.game("q"));
 	}*/
 
-	@Test
+	/*@Test
 	public void testIsTie()
 	{
-		char[][] board = new char[][]{{'O', 'X', 'O'}, {'O', 'X', 'X'}, {'X', 'O', 'O'}};
+		Board.addMove();
+
 		assertEquals(false, ticTacToe.checkWinner());
 		
 	}
-	
+
 	@Test
 	public void testCorrectPosition()
 	{
@@ -56,136 +60,75 @@ public class ticTacToeTest
 
 	@Test
 	public void testXWonRows()
-	{
+	{	
+		board Board = new board();
 
-		char[][] board = new char[3][3];
+		Board.addMove(1, 'X');
+		Board.addMove(2, 'X');
+		Board.addMove(3, 'X');
 
-		// looping through X-axis
-		for(int i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(int j = 0; j < 3; j++)
-			{
-				board[i][j] = '-';
-			}
-		}	
-
-		board[0][0] = 'X';
-		board[0][1] = 'X'; 
-		board[0][2] = 'X';
-
-		assertEquals('X', ticTacToe.checkRows(board));
+		assertEquals('X', board.checkRows());
 	}
 
 	@Test
 	public void testXWonColumns()
 	{
-		char[][] board = new char[3][3];
-		
-		// looping through X-axis
-		for(int i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(int j = 0; j < 3; j++)
-			{
-				board[i][j] = '-';
-			}
-		}	
+		board Board = new board();
 
-		board[0][0] = 'X';
-		board[1][0] = 'X'; 
-		board[2][0] = 'X';
+		Board.addMove(1, 'X');
+		Board.addMove(4, 'X');
+		Board.addMove(7, 'X');
 
-		assertEquals('X', ticTacToe.checkColumns(board));
+		assertEquals('X', board.checkColumns());
 	}
 
 	@Test
 	public void testXWonDiagonally()
 	{
-		char[][] board = new char[3][3];
-		
-		// looping through X-axis
-		for(Integer i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(Integer j = 0; j < 3; j++)
-			{
-				board[i][j] = '-' ;
-			}
-		}	
+		board Board = new board();
 
-		board[0][0] = 'X';
-		board[1][1] = 'X'; 
-		board[2][2] = 'X';
-
-		assertEquals('X', ticTacToe.checkDiagonally(board));
-
+		Board.addMove(1, 'X');
+		Board.addMove(5, 'X');
+		Board.addMove(9, 'X');
+		Board.getBoard();
+		assertEquals('X', board.checkDiagnoally());
 	}
 
 	@Test
 	public void testOWonRows()
 	{
-		char[][] board = new char[3][3];
+		board Board = new board();
 
-		// looping through X-axis
-		for(int i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(int j = 0; j < 3; j++)
-			{
-				board[i][j] = '-';
-			}
-		}	
+		Board.addMove(7, 'O');
+		Board.addMove(8, 'O');
+		Board.addMove(9, 'O');
+		
 
-		board[2][0] = 'O';
-		board[2][1] = 'O'; 
-		board[2][2] = 'O';
-
-		assertEquals('O', ticTacToe.checkRows(board));
+		assertEquals('O', board.checkRows());
 	}
 
 	@Test
 	public void testOWonColumns()
 	{
-		char[][] board = new char[3][3];
-		
-		// looping through X-axis
-		for(int i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(int j = 0; j < 3; j++)
-			{
-				board[i][j] = '-';
-			}
-		}	
+		board Board = new board();
 
-		board[0][1] = 'O';
-		board[1][1] = 'O'; 
-		board[2][1] = 'O';
+		Board.addMove(2, 'O');
+		Board.addMove(5, 'O');
+		Board.addMove(8, 'O');
 
-		assertEquals('O', ticTacToe.checkColumns(board));
+		assertEquals('O', board.checkColumns());
 	}
 
 	@Test
 	public void testOWonDiagonally()
 	{
-		char[][] board = new char[3][3];
-		
-		// looping through X-axis
-		for(Integer i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(Integer j = 0; j < 3; j++)
-			{
-				board[i][j] = '-' ;
-			}
-		}	
+		board Board = new board();
 
-		board[0][2] = 'O';
-		board[1][1] = 'O'; 
-		board[2][0] = 'O';
+ 		Board.addMove(3, 'O');
+		Board.addMove(5, 'O');
+		Board.addMove(7, 'O');
 
-		assertEquals('O', ticTacToe.checkDiagonally(board));
+		assertEquals('O', board.checkDiagnoally());
 	}
 }
 
