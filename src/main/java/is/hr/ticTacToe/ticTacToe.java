@@ -13,38 +13,18 @@ public class ticTacToe
 	}*/
 
 
-	/*public void input(Integer move)
+	public static void input(Integer move)
 	{
 		if(legalInput(move) == true)
 		{	
-			//split function
-			switch(move)
-			{
-				case 1: board[0][0] = currentPlayer;
-						break;
-				case 2: board[0][1] = currentPlayer;
-						break;
-				case 3: board[0][2] = currentPlayer;
-						break;
-				case 4: board[1][0] = currentPlayer;
-						break;
-				case 5: board[1][1] = currentPlayer;
-						break;
-				case 6: board[1][2] = currentPlayer;
-						break;
-				case 7: board[2][0] = currentPlayer;
-						break;
-				case 8: board[2][1] = currentPlayer;
-						break;
-				case 9: board[2][2] = currentPlayer;
-						break;
-			}
+			board.addMove(move, currentPlayer);
+			currentPlayer = changePlayer(currentPlayer);
 		}
 		else
 		{
 			throw new RuntimeException("Illegal input");
 		}
-	}*/
+	}
 
 	static public char changePlayer(char playerMark)
 	{
