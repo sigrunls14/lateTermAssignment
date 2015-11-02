@@ -14,15 +14,24 @@ public class ticTacToe
 
 	public void input(Integer move)
 	{
-		if(legalInput(move) == true)
-		{	
-			board.addMove(move, currentPlayer);
-			currentPlayer = changePlayer(currentPlayer);
+
+		if(Board.isOccupied(move) != true)
+		{
+			if(legalInput(move) == true)
+			{	
+				board.addMove(move, currentPlayer);
+				currentPlayer = changePlayer(currentPlayer);
+			}
+			else
+			{
+				throw new RuntimeException("Illegal input");
+			}
 		}
 		else
 		{
-			throw new RuntimeException("Illegal input");
+			throw new RuntimeException("this place is occupied!!");
 		}
+		
 	}
 
 	static public char changePlayer(char playerMark)
@@ -50,9 +59,45 @@ public class ticTacToe
 		}
 	}
 
+	private boolean checkRows()
+	{
+		if( Board.checkRows() != '-')
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	private boolean checkColumns()
+	{
+		if( Board.checkColumns() != '-')
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	private boolean checkDiagnoally()
+	{
+		if( Board.checkDiagnoally() != '-')
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	public boolean checkWinner()
 	{
-		if(( Board.checkRows() || Board.checkColumns(); || Board.checkDiagonally() ) != '-')
+		if( (checkRows() == true ) || (checkDiagnoally() == true) || (checkColumns() == true) )
 		{
 			return true;
 		}
