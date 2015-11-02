@@ -3,4 +3,7 @@
 ./gradlew build
 ./gradlew test
 ./gradlew clean
+./gradlew distTar
+./gradlew distZip
 
+cp build/distributions/lateTermAssignment.tar ~/ticTacToe.jar
