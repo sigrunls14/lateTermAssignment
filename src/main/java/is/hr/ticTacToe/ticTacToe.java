@@ -1,42 +1,20 @@
 package is.hr.ticTacToe;
-import java.util.Scanner;
 
 public class ticTacToe
 {
-	private char [][] board;
-	private char currentPlayer;
+	board Board = new board();
+	private char currentPlayer = 'X';
 
-	public ticTacToe()
+	/*public ticTacToe()
 	{
-		board = new char [3][3];
+		board = Board.getBoard();
 		currentPlayer = 'X';
-		setUpBoard();
-	}	
+		//Board.setUpBoard();
+	}*/
 
 
-	public void setUpBoard()
+	/*public void input(Integer move)
 	{
-		// looping through X-axis
-		for(int i = 0; i < 3; i++)
-		{
-			// Looping through Y-axis
-			for(int j = 0; j < 3; j++)
-			{
-				board[i][j] = '-';
-			}
-		}
-	}
-
-	public void input()
-	{
-
-		// diff class
-		Integer move;
-		Scanner input = new Scanner(System.in);
-		move = input.nextInt();
-		//
-
-
 		if(legalInput(move) == true)
 		{	
 			//split function
@@ -66,12 +44,24 @@ public class ticTacToe
 		{
 			throw new RuntimeException("Illegal input");
 		}
+	}*/
+
+	static public char changePlayer(char playerMark)
+	{
+		if(playerMark == 'X')
+		{
+			return 'O';
+		}
+		else
+		{
+			return 'X';
+		}
 	}
 
-	//Checks 
+	//Checks if input is an Integer between 0 and 10
 	static public boolean legalInput(Integer move)
 	{
-		if((move > 0) && (move < 10))
+		if((move > 0) && (move <= 10))
 		{
 			return true;
 		}
