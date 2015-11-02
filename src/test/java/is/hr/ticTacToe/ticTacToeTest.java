@@ -10,19 +10,13 @@ public class ticTacToeTest
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
 	}
 
-	/*@Test
+	@Test
 	public void testLegalInput()
 	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(10));
-		}
-		catch(Exception e)
-		{
-			assertEquals("Illegal input", e.getMessage());
-		}
+		assertEquals(false, ticTacToe.legalInput(11));
 	}
 
+	/*
 	@Test
 	public void testIsOccupied()
 	{
@@ -61,6 +55,12 @@ public class ticTacToeTest
 		assertEquals("")
 	}*/
 
+
+	@Test
+	public void testChangePlayer()
+	{
+		assertEquals('O', ticTacToe.changePlayer('X'));
+	}
 
 	@Test
 	public void testXWonRows()
