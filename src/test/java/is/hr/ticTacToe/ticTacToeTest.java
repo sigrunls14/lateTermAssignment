@@ -50,7 +50,7 @@ public class ticTacToeTest
 		Board.addMove(5, 'X');
 		assertEquals('X', Board.correctPosition());
 	}
-
+	*/
 
 	@Test
 	public void testChangePlayer()
