@@ -10,19 +10,13 @@ public class ticTacToeTest
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
 	}
 
-	/*@Test
+	@Test
 	public void testLegalInput()
 	{
-		try
-		{
-			assertEquals(0, ticTacToe.game(10));
-		}
-		catch(Exception e)
-		{
-			assertEquals("Illegal input", e.getMessage());
-		}
+		assertEquals(false, ticTacToe.legalInput(10));
 	}
 
+	/*
 	@Test
 	public void testIsOccupied()
 	{
