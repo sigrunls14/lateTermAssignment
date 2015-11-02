@@ -57,6 +57,12 @@ public class ticTacToeTest
 
 
 	@Test
+	public void testChangePlayer()
+	{
+		assertEquals("O", ticTacToe.changePlayer());
+	}
+
+	@Test
 	public void testXWonRows()
 	{
 
