@@ -8,12 +8,11 @@ public class ticTacToe
 	/*public ticTacToe()
 	{
 		board = Board.getBoard();
-		currentPlayer = 'X';
 		//Board.setUpBoard();
 	}*/
 
 
-	public static void input(Integer move)
+	public void input(Integer move)
 	{
 		if(legalInput(move) == true)
 		{	
@@ -100,5 +99,17 @@ public class ticTacToe
 		}
 
 		return checkWinner;
+	}
+
+	public boolean checkWinner()
+	{
+		if((checkRows() || checkColumns() || iacheckDiagonally()) != '-')
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }

@@ -2,7 +2,7 @@ package is.hr.ticTacToe;
 
 public class board
 {
-	private char [][] board;
+	private static char [][] board;
 
 	public board()
 	{
@@ -28,7 +28,7 @@ public class board
 		return board;
 	}
 
-	static public void addMove(Integer move, char currentPlayer)
+	public static void addMove(Integer move, char currentPlayer)
 	{
 		switch(move)
 		{
