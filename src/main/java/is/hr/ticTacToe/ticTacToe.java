@@ -2,15 +2,8 @@ package is.hr.ticTacToe;
 
 public class ticTacToe
 {
-	board Board = new board();
+	static board Board = new board();
 	private char currentPlayer = 'X';
-
-	/*public ticTacToe()
-	{
-		board = Board.getBoard();
-		//Board.setUpBoard();
-	}*/
-
 
 	public void input(Integer move)
 	{
@@ -59,8 +52,9 @@ public class ticTacToe
 		}
 	}
 
-	public boolean checkWinner()
+	public static boolean checkWinner()
 	{
+		Board.getBoard();
 		if( (Board.checkRows() != '-' ) || (Board.checkDiagnoally() != '-') || (Board.checkColumns() != '-') )
 		{
 			return true;

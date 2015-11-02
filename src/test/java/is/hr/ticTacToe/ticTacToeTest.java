@@ -120,6 +120,12 @@ public class ticTacToeTest
 
 		assertEquals('O', board.checkDiagnoally());
 	}
+
+	@Test
+	public void testCheckWinner()
+	{
+		assertEquals(false, ticTacToe.checkWinner());
+	}
 }
 
 
