@@ -2,7 +2,7 @@ package is.hr.ticTacToe;
 
 public class board
 {
-	private static char [][] board;
+	private static char [][] board = new char [3][3];
 
 	public board()
 	{
