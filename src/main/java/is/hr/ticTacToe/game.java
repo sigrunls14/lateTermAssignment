@@ -61,10 +61,13 @@ public class game
 						System.out.println("Player: " + player + " Has won");
 						System.out.println("Do you want to start a new game? (y/n)");
 						move = input.next();
+						//Check if player wants to start a new game
+						//If player says n or N quit game
 						if((move == "n") || (move == "N"))
 						{
 							gameOver = true;
 						}
+						//Else start a new game
 						else
 						{
 							turns = 0;
