@@ -11,6 +11,7 @@ public class game
 		boolean gameOver = false;
 		Integer turns = 0;
 		String move;
+		char player;
 
 		//Loop the game	until player wants to quit	
 		do
@@ -19,7 +20,7 @@ public class game
 			do
 			{
 				//check if turns is equal to 9, then it is a tie
-				if(turns < 10)
+				if(turns == 9)
 				{
 					//Print out tie msg
 					System.out.print("It is a Tie!! Do you want to start a new game?");
@@ -41,8 +42,10 @@ public class game
 				//This is the real game check
 				else
 				{
+					player = tic.getPlayer();
 					//Print out msg for number
 					System.out.println(ask4Number);
+					System.out.println("It is player: " + player + " turn");
 					//Take in number
 					tic.printBoard();	
 					move = input.next();
@@ -51,8 +54,16 @@ public class game
 					tic.input(Integer.parseInt(move));
 					//Check if winner, returns false if there is no winner
 					gameOver = tic.checkWinner();
-					//1 more turn over
-					turns++;
+					if(gameOver == true)
+					{
+						System.out.println("Player: " + player + " Has won");
+					}
+					else
+					{
+						//1 more turn over
+						turns++;
+					}
+
 				}
 
 			}while(gameOver != true);
