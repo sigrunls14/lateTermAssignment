@@ -11,19 +11,23 @@ public class ticTacToeTest
 		org.junit.runner.JUnitCore.main("is.hr.ticTacToe.ticTacToeTest");
 	}
 
+
+	//Test if input is between 1 and 10
 	@Test
 	public void testLegalInput()
 	{
 		assertEquals(false, ticTacToe.legalInput(11));
 	}
 
-	
+	//Test if selection is occupied
 	@Test
 	public void testIsOccupied()
 	{
+		//Creates a new object of the board
 		board Board = new board();
+		//Adds move to the board
 		Board.addMove(5, 'X');
-
+		//Check if occupied
 		assertEquals(true, board.isOccupied(5));
 	}
 
@@ -42,6 +46,7 @@ public class ticTacToeTest
 		assertEquals(false, ticTacToe.checkWinner());
 		
 	}*/
+
 
 	@Test
 	public void testChangePlayer()
