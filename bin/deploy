@@ -8,7 +8,7 @@ bin/package
 
 # If the installation folder exists under /tmp, remove it
 test -f /tmp/${APP} && rm -r /tmp/${APP}
-cp -r build/install/${APP}/ /tmp
+cp -r build/install/${APP} /tmp
 
 # Run application once
 /tmp/${APP}/bin/${APP}
