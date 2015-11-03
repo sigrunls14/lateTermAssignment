@@ -20,13 +20,13 @@ public class ticTacToe
 			//Throws an error if it is illegal input
 			else
 			{
-				throw new RuntimeException("Illegal input");
+				System.out.println("Invalid move!");
 			}
 		}
 		//More errors for occupied
 		else
 		{
-			throw new RuntimeException("Occupied!!");
+			System.out.println("This place is Occupied!");
 		}
 		
 	}
