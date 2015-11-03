@@ -23,18 +23,22 @@ public class board
 		}
 	}
 
+	//Calls the setUpBoard to reset all places on board
 	public void resetBoard()
 	{
 		setUpBoard();
 	}
 
+	// makes it possible for other classes to see the board
 	public char[][] getBoard()
 	{
 		return board;
 	}
 
+	// Takes in the Currentplayer and move to place that player on square
 	public static void addMove(Integer move, char currentPlayer)
 	{
+		// Takes in the integer move and finds a corresponding place on board
 		switch(move)
 		{
 			case 1: board[0][0] = currentPlayer;
@@ -58,10 +62,14 @@ public class board
 		}
 	}
 
+	//Huge check to see if place is occupied
 	public static boolean isOccupied(Integer move)
 	{
+
 		boolean occupied = false;
 
+		//Takes in an integer for a place and then checks if it has either X or O
+		//if place is not - then it is occupied
 		switch(move)
 		{
 			case 1: 
@@ -159,30 +167,39 @@ public class board
 
 	public static char checkDiagnoally()
 	{
+		//set checkWinner to -
 		char checkWinner = '-';
 
+		//checks if place 1,5 and 9 have -, if not then check if that row has the same player mark
 		if((board[0][0] != '-') && (board[0][0] == board[1][1]) && (board[1][1] == board[2][2]))
 		{
+			//Changes the checkWinner to that player if 1,5 and 9 have the same mark
 			checkWinner = board[0][0];
 		}
+		//Checks if place 3 has -, if not then check if place 3,5 and 7 have the same mark
 		else if ( (board[0][2] != '-') && (board[0][2] == board[1][1]) && (board[1][1] == board[2][0])) 
 		{
+			//Changes the checkWinner to that player if 3,5,7 have the same mark
 			checkWinner = board[0][2];
 		}
 
+		//Returns either - or X or O depending on status on winner 
 		return checkWinner;
 	}
 
+	//Prints out the board on screen
 	public void printBoard()
 	{
-		System.out.println();
+		//X-axis
 		for (int i = 0; i < 3; i++)
 		{
+			//Y-axis
 			for(int j = 0; j < 3; j++)
 			{
 				System.out.print(board[i][j]);
 				if(j < 2)
 				{
+					//Puts a pipe between squares to make the board pretty
 					System.out.print("|");
 				}
 				else

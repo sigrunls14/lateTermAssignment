@@ -12,48 +12,55 @@ public class game
 		Integer turns = 0;
 		String move;
 
+		//Loop the game	until player wants to quit	
 		do
 		{
-			if(turns == 9)
+			//Loops until tie or gameover
+			do
 			{
-				System.out.print("It is a Tie!!");
-				move = input.next();
-				if((move == "n") || (move == "N"))
+				//check if turns is equal to 9, then it is a tie
+				if(turns < 10)
 				{
+					//Print out tie msg
+					System.out.print("It is a Tie!! Do you want to start a new game?");
 					move = input.next();
-					gameOver = true;
+					
+					//If player wants to quit
+					if((move == "n") || (move == "N"))
+					{
+						move = input.next();
+						gameOver = true;
+					}
+					//else start a new game
+					else
+					{
+						turns = 0;
+						tic.resetBoard();
+					}
 				}
+				//This is the real game check
 				else
 				{
-					turns = 0;
-					tic.resetBoard();
+					//Print out msg for number
+					System.out.println(ask4Number);
+					//Take in number
+					tic.printBoard();	
+					move = input.next();
+
+					//Send number to the game
+					tic.input(Integer.parseInt(move));
+					//Check if winner, returns false if there is no winner
+					gameOver = tic.checkWinner();
+					//1 more turn over
+					turns++;
 				}
-			}
-			else
-			{
-				System.out.println(ask4Number);
-				tic.printBoard();	
-				move = input.next();
-				tic.input(Integer.parseInt(move));
-				gameOver = tic.checkWinner();
-				turns++;
-			}
-		}while(gameOver != true);		
+
+			}while(gameOver != true);
+			tic.printBoard();
+
+		}while((move != "n") || (move != "N"));
+				
 	}
 
-	/*public static String continueGame()
-	{
-		String reply = input.nextLine();
-
-		return reply;
-	}
-
-	//Asks for move
- 	public static Integer move()
- 	{
- 		//Integer move;
-		Integer move = input.nextInt();
-
-		return move;
- 	}*/
+	
 }
