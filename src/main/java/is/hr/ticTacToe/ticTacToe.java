@@ -51,6 +51,11 @@ public class ticTacToe
 		}
 	}
 
+	public char getPlayer()
+	{
+		return currentPlayer;
+	}
+
 	//Checks if input is an Integer between 0 and 10
 	static public boolean legalInput(Integer move)
 	{
@@ -69,8 +74,19 @@ public class ticTacToe
 	{
 		//Fetches the board
 		Board.getBoard();
+		
 		//Checks if there is any place where X or O is a winner
-		if( (Board.checkRows() != '-' ) || (Board.checkDiagnoally() != '-') || (Board.checkColumns() != '-') )
+		if(Board.checkRows() != '-' )
+		{
+			return true;
+		}
+
+		else if(Board.checkDiagnoally() != '-')
+		{
+			return true;
+		}
+
+		else if(Board.checkColumns() != '-')
 		{
 			return true;
 		}
