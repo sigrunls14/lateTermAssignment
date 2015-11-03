@@ -52,14 +52,17 @@ public class game
 
 					//Send number to the game
 					tic.input(Integer.parseInt(move));
+					
 					//Check if winner, returns false if there is no winner
 					gameOver = tic.checkWinner();
-					if(gameOver == true)
+					
+					if(gameOver)
 					{
 						System.out.println("Player: " + player + " Has won");
 					}
 					else
 					{
+						System.out.println("Check");
 						//1 more turn over
 						turns++;
 					}

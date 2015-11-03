@@ -74,7 +74,7 @@ public class ticTacToe
 	{
 		//Fetches the board
 		Board.getBoard();
-		
+
 		//Checks if there is any place where X or O is a winner
 		if(Board.checkRows() != '-' )
 		{
