@@ -23,10 +23,9 @@ public class game
 				if(turns == 9)
 				{
 					//Print out tie msg
-					System.out.print("It is a Tie!! Do you want to start a new game?");
-					move = input.next();
-								
-					switch(move)
+					System.out.print("It is a Tie!! Do you want to start a new game? (Y/N)" );
+					move = input.next();		
+					switch(move.toLowerCase())
 					{
 						case "n":
 							gameOver = true;
@@ -35,7 +34,7 @@ public class game
 							turns = 0;
 							tic.resetBoard();
 						default:
-							System.out.println("Invalid Input!!!");
+							System.out.println("Invalid Input!!! ");
 							break;
 					}
 				}
@@ -49,7 +48,7 @@ public class game
 					//Take in number
 					tic.printBoard();	
 					move = input.next();
-
+					
 					//Send number to the game
 					tic.input(Integer.parseInt(move));
 					
@@ -63,12 +62,12 @@ public class game
 						move = input.next();
 						//Check if player wants to start a new game
 						//If player says n or N quit game
-						if((move == "n") || (move == "N"))
+						if((move.toLowerCase() == "n"))
 						{
 							gameOver = true;
 						}
 						//else start a new game
-						else if((move == "y") || (move == "Y"))
+						else if((move.toLowerCase() == "y"))
 						{
 							turns = 0;
 							tic.resetBoard();
