@@ -25,18 +25,18 @@ public class game
 					//Print out tie msg
 					System.out.print("It is a Tie!! Do you want to start a new game?");
 					move = input.next();
-					
-					//If player wants to quit
-					if((move == "n") || (move == "N"))
+								
+					switch(move)
 					{
-						//move = input.next();
-						gameOver = true;
-					}
-					//else start a new game
-					else
-					{
-						turns = 0;
-						tic.resetBoard();
+						case "n":
+							gameOver = true;
+							break;
+						case "y":
+							turns = 0;
+							tic.resetBoard();
+						default:
+							System.out.println("Invalid Input!!!");
+							break;
 					}
 				}
 				//This is the real game check
@@ -67,11 +67,15 @@ public class game
 						{
 							gameOver = true;
 						}
-						//Else start a new game
-						else
+						//else start a new game
+						else if((move == "y") || (move == "Y"))
 						{
 							turns = 0;
 							tic.resetBoard();
+						}
+						else
+						{
+							System.out.print("Invalid input!!");
 						}
 					}
 					else
@@ -88,6 +92,4 @@ public class game
 		}while((move != "n") || (move != "N"));
 				
 	}
-
-	
 }
