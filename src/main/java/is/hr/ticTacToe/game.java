@@ -29,7 +29,7 @@ public class game
 					//If player wants to quit
 					if((move == "n") || (move == "N"))
 					{
-						move = input.next();
+						//move = input.next();
 						gameOver = true;
 					}
 					//else start a new game
@@ -59,10 +59,20 @@ public class game
 					if(gameOver)
 					{
 						System.out.println("Player: " + player + " Has won");
+						System.out.println("Do you want to start a new game? (y/n)");
+						move = input.next();
+						if((move == "n") || (move == "N"))
+						{
+							gameOver = true;
+						}
+						else
+						{
+							turns = 0;
+							tic.resetBoard();
+						}
 					}
 					else
 					{
-						System.out.println("Check");
 						//1 more turn over
 						turns++;
 					}
