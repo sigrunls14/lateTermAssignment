@@ -7,4 +7,4 @@
 ./gradlew distZip
 ./gradlew jar
 
-cp build/distributions/lateTermAssignment.tar ~/ticTacToe.jar
+cp build/distributions/lateTermAssignment.tar ~/ticTacToe.tar
